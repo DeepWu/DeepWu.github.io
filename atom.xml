@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://deepwu.github.io/"/>
-  <updated>2020-05-01T06:55:06.917Z</updated>
+  <updated>2020-05-01T07:18:00.688Z</updated>
   <id>http://deepwu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://deepwu.github.io/2020/050119279.html"/>
     <id>http://deepwu.github.io/2020/050119279.html</id>
     <published>2020-05-01T05:13:55.000Z</published>
-    <updated>2020-05-01T06:55:06.917Z</updated>
+    <updated>2020-05-01T07:18:00.688Z</updated>
     
     <summary type="html">
     
@@ -42,29 +42,6 @@
       <category term="blog" scheme="http://DeepWu.github.io/tags/blog/"/>
     
       <category term="hexo" scheme="http://DeepWu.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://deepwu.github.io/2020/043016107.html"/>
-    <id>http://deepwu.github.io/2020/043016107.html</id>
-    <published>2020-04-30T07:25:42.451Z</published>
-    <updated>2020-04-30T14:49:59.555Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
