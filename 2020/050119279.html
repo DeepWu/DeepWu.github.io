@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基于hexo的博客搭建和更新, Hexo">
+    <meta name="keywords" content="基于hexo的博客搭建和更新, DeepWu">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基于hexo的博客搭建和更新 | Hexo</title>
+    <title>基于hexo的博客搭建和更新 | DeepWu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="DeepWu" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -42,7 +42,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">DeepWu</span>
                 </a>
             </div>
             
@@ -141,7 +141,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">DeepWu</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -324,10 +324,115 @@
 
 
 
-<main class="container content">
+
+
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -372,7 +477,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-02
+                    2020-05-04
                 </div>
                 
 
@@ -391,7 +496,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基于hexo的博客搭建和更新"><a href="#基于hexo的博客搭建和更新" class="headerlink" title="基于hexo的博客搭建和更新"></a>基于hexo的博客搭建和更新</h1><h2 id="博客搭建教程"><a href="#博客搭建教程" class="headerlink" title="博客搭建教程"></a>博客搭建教程</h2><ul>
+                <h1><span id="基于hexo的博客搭建和更新">基于hexo的博客搭建和更新</span></h1><h2><span id="博客搭建教程">博客搭建教程</span></h2><ul>
 <li><p><a href="https://www.bilibili.com/video/BV1je41147Ma?p=1" target="_blank" rel="noopener">B站视频教程</a></p>
 </li>
 <li><p><a href="https://rika0-0.github.io/" target="_blank" rel="noopener">博客教程地址</a></p>
@@ -399,13 +504,13 @@
 <li><p><a href="https://blog.csdn.net/jspnetcn/article/details/104111651" target="_blank" rel="noopener">博客主题设置与优化地址</a></p>
 </li>
 </ul>
-<h2 id="博客更新操作指南"><a href="#博客更新操作指南" class="headerlink" title="博客更新操作指南"></a>博客更新操作指南</h2><ol>
+<h2><span id="博客更新操作指南">博客更新操作指南</span></h2><ol>
 <li><p>在博客目录下打开 git bash，输入</p>
 <blockquote>
 <p>hexo new “博客更新示例”</p>
 </blockquote>
 <p>如下图所示：</p>
-<img src="http://q9nd0oq0r.bkt.clouddn.com/1.png" alt="博客新建示意图" style="zoom: 67%;" />
+<img src="http://q9nd0oq0r.bkt.clouddn.com/1.png" alt="博客新建示意图" style="zoom: 67%;">
 
 <p>该命令会在D:\DeepWuBlog\hexoblog\source\_posts文件夹下生成博客文档。（该博客文档使用Markdown格式编辑）</p>
 </li>
@@ -416,7 +521,7 @@
 <p>source up.sh</p>
 </blockquote>
 <p>如下图所示：</p>
-<img src="http://q9nd0oq0r.bkt.clouddn.com/2.png" alt="博客上传示意图" style="zoom:50%;" />
+<img src="http://q9nd0oq0r.bkt.clouddn.com/2.png" alt="博客上传示意图" style="zoom:50%;">
 </li>
 <li><p>输入自己的博客网址，查看更新后的博客。 （本人博客地址：DeepWu.github.io）</p>
 </li>
@@ -794,6 +899,100 @@
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
