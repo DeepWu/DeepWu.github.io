@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>大数据开发之Linux学习一</title>
-      <link href="/2020/050519279.html"/>
-      <url>/2020/050519279.html</url>
-      
-        <content type="html"><![CDATA[<h1><span id="大数据开发之linux学习一">大数据开发之Linux学习一</span></h1><h2><span id="linux简介">Linux简介</span></h2><ol><li>贝尔实验室开发出Unix，多个公司在此基础上推出了商业版。（付费） Stallman不同意，提出了GNU计划。<img src="http://q9nd0oq0r.bkt.clouddn.com/3.1.png" alt="Linux的出现" style="zoom: 67%;"></li><li>GNU计划图，即包括：内核、shell、各种外部软件的系统结构。<img src="http://q9nd0oq0r.bkt.clouddn.com/3.2.jpg" alt="GUN计划" style="zoom: 50%;"></li><li>各个公司在Unix基础上提出了商业版，Torvalds在其中一个商业版Unix基础上，开发出了Linux内核。<img src="http://q9nd0oq0r.bkt.clouddn.com/3.3.jpg" alt="Linux与Unix关系图" style="zoom: 67%;"></li></ol><h2><span id="虚拟机安装">虚拟机安装</span></h2><blockquote><p>下载虚拟机软件（VMware），安装软件。</p><p><strong>注意事项：</strong>进入电脑BIOS中（开机画面按F2/F10/ESC），设置虚拟化设备支持。</p></blockquote><h2><span id="centos安装前的准备工作">centos安装前的准备工作</span></h2><ol><li><p>先分配一个虚拟机空间（创建虚拟机）</p></li><li><p>准备centos安装文件(.iso格式)</p></li><li><p>在创建的虚拟机空间，右键、属性、CD/DVD，安装centos</p></li><li><p><strong>网络适配器的设置</strong>：通常选择NAT模式</p><p> <a href>虚拟机三种网络连接区别</a></p></li></ol><h2><span id="centos安装">centos安装</span></h2><p>安装注意事项：</p><ol><li>手动分区（linux至少三个分区： /boot、swap、/ ）</li></ol><pre class=" language-java"><code class="language-java"><span class="token number">1</span><span class="token punctuation">.</span> sda 表示硬盘<span class="token number">2</span><span class="token punctuation">.</span> <span class="token operator">/</span>boot  200M<span class="token number">3</span><span class="token punctuation">.</span> swap 和虚拟机物理内存一样大，用于临时充当内存<span class="token number">3</span><span class="token punctuation">.</span> <span class="token operator">/</span> 剩余所有空间分配给根分区</code></pre><ol start="2"><li>手动选择组件</li></ol><pre class=" language-java"><code class="language-java"><span class="token number">1</span><span class="token punctuation">.</span> 基本系统中<span class="token operator">:</span>兼容程序库、基本、调试工具<span class="token number">2</span><span class="token punctuation">.</span> 应用程序： 互联网浏览器<span class="token number">3</span><span class="token punctuation">.</span> 桌面： 默认</code></pre><ol start="3"><li>第一次启动后会出现Kdump选项，用于系统诊断错误信息</li></ol><h2><span id="centos联网">centos联网</span></h2><ol><li>windows系统下查看iP地址： ipconfig         linux系统下：ifconfig       </li><li>ifconfig命令显示结果如下图所示。</li></ol><img src="http://q9nd0oq0r.bkt.clouddn.com/3.4.jpg" alt="ifconfig运行结果" style="zoom: 80%;"><ol start="3"><li>桌面右上角的联网标志，选择eth0网卡。（不同linux版本可能存在不同的联网设置方式，通常该部分由公司运营负责）</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开发 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 大数据开发 </tag>
-            
-            <tag> Linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>虚拟机网络连接的三种方式</title>
       <link href="/2020/050522046.html"/>
       <url>/2020/050522046.html</url>
@@ -52,6 +25,33 @@
             <tag> Linux </tag>
             
             <tag> 虚拟机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>大数据开发之Linux学习一</title>
+      <link href="/2020/050519279.html"/>
+      <url>/2020/050519279.html</url>
+      
+        <content type="html"><![CDATA[<h1><span id="大数据开发之linux学习一">大数据开发之Linux学习一</span></h1><h2><span id="linux简介">Linux简介</span></h2><ol><li>贝尔实验室开发出Unix，多个公司在此基础上推出了商业版。（付费） Stallman不同意，提出了GNU计划。<img src="http://q9nd0oq0r.bkt.clouddn.com/3.1.png" alt="Linux的出现" style="zoom: 67%;"></li><li>GNU计划图，即包括：内核、shell、各种外部软件的系统结构。<img src="http://q9nd0oq0r.bkt.clouddn.com/3.2.jpg" alt="GUN计划" style="zoom: 50%;"></li><li>各个公司在Unix基础上提出了商业版，Torvalds在其中一个商业版Unix基础上，开发出了Linux内核。<img src="http://q9nd0oq0r.bkt.clouddn.com/3.3.jpg" alt="Linux与Unix关系图" style="zoom: 67%;"></li></ol><h2><span id="虚拟机安装">虚拟机安装</span></h2><blockquote><p>下载虚拟机软件（VMware），安装软件。</p><p><strong>注意事项：</strong>进入电脑BIOS中（开机画面按F2/F10/ESC），设置虚拟化设备支持。</p></blockquote><h2><span id="centos安装前的准备工作">centos安装前的准备工作</span></h2><ol><li><p>先分配一个虚拟机空间（创建虚拟机）</p></li><li><p>准备centos安装文件(.iso格式)</p></li><li><p>在创建的虚拟机空间，右键、属性、CD/DVD，安装centos</p></li><li><p><strong>网络适配器的设置</strong>：通常选择NAT模式</p><p> <a href="https://deepwu.github.io/2020/050522046.html">虚拟机三种网络连接区别</a></p></li></ol><h2><span id="centos安装">centos安装</span></h2><p>安装注意事项：</p><ol><li>手动分区（linux至少三个分区： /boot、swap、/ ）</li></ol><pre class=" language-java"><code class="language-java"><span class="token number">1</span><span class="token punctuation">.</span> sda 表示硬盘<span class="token number">2</span><span class="token punctuation">.</span> <span class="token operator">/</span>boot  200M<span class="token number">3</span><span class="token punctuation">.</span> swap 和虚拟机物理内存一样大，用于临时充当内存<span class="token number">3</span><span class="token punctuation">.</span> <span class="token operator">/</span> 剩余所有空间分配给根分区</code></pre><ol start="2"><li>手动选择组件</li></ol><pre class=" language-java"><code class="language-java"><span class="token number">1</span><span class="token punctuation">.</span> 基本系统中<span class="token operator">:</span>兼容程序库、基本、调试工具<span class="token number">2</span><span class="token punctuation">.</span> 应用程序： 互联网浏览器<span class="token number">3</span><span class="token punctuation">.</span> 桌面： 默认</code></pre><ol start="3"><li>第一次启动后会出现Kdump选项，用于系统诊断错误信息</li></ol><h2><span id="centos联网">centos联网</span></h2><ol><li>windows系统下查看iP地址： ipconfig         linux系统下：ifconfig       </li><li>ifconfig命令显示结果如下图所示。</li></ol><img src="http://q9nd0oq0r.bkt.clouddn.com/3.4.jpg" alt="ifconfig运行结果" style="zoom: 80%;"><ol start="3"><li>桌面右上角的联网标志，选择eth0网卡。（不同linux版本可能存在不同的联网设置方式，通常该部分由公司运营负责）</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 大数据开发 </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
