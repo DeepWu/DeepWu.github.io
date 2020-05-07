@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://deepwu.github.io/"/>
-  <updated>2020-05-05T08:15:09.041Z</updated>
+  <updated>2020-05-07T04:11:31.518Z</updated>
   <id>http://deepwu.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>虚拟机网络连接的三种方式</title>
-    <link href="http://deepwu.github.io/2020/050522046.html"/>
-    <id>http://deepwu.github.io/2020/050522046.html</id>
-    <published>2020-05-05T06:15:00.000Z</published>
-    <updated>2020-05-05T08:15:09.041Z</updated>
+    <title>大数据开发之Linux学习二</title>
+    <link href="http://deepwu.github.io/2020/050619279.html"/>
+    <id>http://deepwu.github.io/2020/050619279.html</id>
+    <published>2020-05-06T09:15:00.000Z</published>
+    <updated>2020-05-07T04:11:31.518Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h1&gt;&lt;span id=&quot;虚拟机网络连接的三种方式&quot;&gt;虚拟机网络连接的三种方式&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span
+          &lt;h1&gt;&lt;span id=&quot;大数据开发之linux学习二&quot;&gt;大数据开发之Linux学习二&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span
         
       
     
@@ -42,8 +42,6 @@
       <category term="大数据开发" scheme="http://DeepWu.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/"/>
     
       <category term="Linux" scheme="http://DeepWu.github.io/tags/Linux/"/>
-    
-      <category term="虚拟机" scheme="http://DeepWu.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
   </entry>
   
@@ -73,6 +71,37 @@
       <category term="大数据开发" scheme="http://DeepWu.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/"/>
     
       <category term="Linux" scheme="http://DeepWu.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>虚拟机网络连接的三种方式</title>
+    <link href="http://deepwu.github.io/2020/050522046.html"/>
+    <id>http://deepwu.github.io/2020/050522046.html</id>
+    <published>2020-05-05T06:15:00.000Z</published>
+    <updated>2020-05-05T08:15:09.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1&gt;&lt;span id=&quot;虚拟机网络连接的三种方式&quot;&gt;虚拟机网络连接的三种方式&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发" scheme="http://DeepWu.github.io/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="大数据开发" scheme="http://DeepWu.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Linux" scheme="http://DeepWu.github.io/tags/Linux/"/>
+    
+      <category term="虚拟机" scheme="http://DeepWu.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
   </entry>
   
