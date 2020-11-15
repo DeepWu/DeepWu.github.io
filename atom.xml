@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://deepwu.github.io/"/>
-  <updated>2020-10-09T14:31:12.909Z</updated>
+  <updated>2020-10-11T14:04:00.030Z</updated>
   <id>http://deepwu.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1. 什么是MaxCompute</title>
+    <link href="http://deepwu.github.io/2020/101215368.html"/>
+    <id>http://deepwu.github.io/2020/101215368.html</id>
+    <published>2020-10-12T13:40:43.733Z</published>
+    <updated>2020-10-11T14:04:00.030Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://help.aliyun.com/product/27797.html?spm=a2c4g.11186623.6.540.2a4681d6qjoxaC&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>rabbitmq</title>
@@ -63,9 +87,9 @@
       <category term="论文" scheme="http://DeepWu.github.io/categories/%E8%AE%BA%E6%96%87/"/>
     
     
-      <category term="研究生" scheme="http://DeepWu.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
-    
       <category term="论文" scheme="http://DeepWu.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+      <category term="研究生" scheme="http://DeepWu.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
     
   </entry>
   
@@ -92,9 +116,9 @@
       <category term="写作" scheme="http://DeepWu.github.io/categories/%E5%86%99%E4%BD%9C/"/>
     
     
-      <category term="研究生" scheme="http://DeepWu.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
-    
       <category term="论文" scheme="http://DeepWu.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+      <category term="研究生" scheme="http://DeepWu.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
     
   </entry>
   
@@ -192,7 +216,7 @@
     <link href="http://deepwu.github.io/2020/050119279.html"/>
     <id>http://deepwu.github.io/2020/050119279.html</id>
     <published>2020-05-01T05:13:55.000Z</published>
-    <updated>2020-05-04T05:58:46.000Z</updated>
+    <updated>2020-10-09T14:59:08.021Z</updated>
     
     <summary type="html">
     

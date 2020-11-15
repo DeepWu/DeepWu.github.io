@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="论文盲审立帖为证, DeepWu">
+    <meta name="keywords" content="1. 什么是MaxCompute, DeepWu">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>论文盲审立帖为证 | DeepWu</title>
+    <title>1. 什么是MaxCompute | DeepWu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://q9nd0oq0r.bkt.clouddn.com/6.b.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">论文盲审立帖为证</h1>
+                    <h1 class="description center-align post-title">1. 什么是MaxCompute</h1>
                 </div>
             </div>
         </div>
@@ -439,29 +439,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E8%AE%BA%E6%96%87/">
-                                <span class="chip bg-color">论文</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
-                                <span class="chip bg-color">研究生</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E8%AE%BA%E6%96%87/" class="post-category">
-                                论文
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -470,21 +453,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-13
+                    2020-10-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-13
+                    2020-10-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    61
+                    2k
                 </div>
                 
 
@@ -496,8 +479,173 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="大数据开发之linux学习二">大数据开发之Linux学习二</span></h1><h1><span id="论文盲审">论文盲审</span></h1><p>盲审通过之后，三天内一定做关于导师选择、论文盲审两期视频，造福师弟师妹。</p>
-<h2><span id="研究生导师选择经验">研究生导师选择经验</span></h2><h2><span id="论文盲审经验">论文盲审经验</span></h2>
+                <p>[toc]</p>
+<p><a href="https://help.aliyun.com/product/27797.html?spm=a2c4g.11186623.6.540.2a4681d6qjoxaC" target="_blank" rel="noopener">MaxCompute(OPDS)官方教程</a></p>
+<h1><span id="1-什么是maxcompute">1. 什么是MaxCompute?</span></h1><ol>
+<li>MaxCompute提供了大量数据的存储以及分布式计算模型，即在阿里云开通MaxCompute之后可以存储海量数据以及通过其提供的计算模型进行数据分析。</li>
+</ol>
+<h2><span id="适合多少数据的存储">适合多少数据的存储？</span></h2><p>MaxCompute适用于100GB以上规模的存储及计算需求，最大可达EB级别。</p>
+<h2><span id="主要提供的计算模型">主要提供的计算模型</span></h2><p>MaxCompute支持SQL、MapReduce、UDF（Java/Python）、Graph、基于DAG的处理、交互式、内存计算、机器学习等计算类型及MPI迭代类算法。简化了企业大数据平台的应用架构。</p>
+<h2><span id="系统架构">系统架构</span></h2><blockquote>
+<p>MaxCompute以数据为中心，内建多种计算模型和服务接口，满足广泛的数据分析需求。一切服务“开通”即用。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011100914.png" alt></p>
+<h2><span id="主要功能">主要功能</span></h2><ol>
+<li><p>Tunnel：通过Tunnel提供海量数据传输服务（提供了java编程接口），通过该类可以实现高并发的离线数据上传下载服务。支持每天TB/PB级别的数据导入导出，特别适合于<strong>全量数据或历史数据的批量导入</strong>。</p>
+</li>
+<li><p>DataHub服务：针对实时数据上传的场景，MaxCompute提供了延迟低、使用方便的<a href="https://help.aliyun.com/document_detail/47439.html" target="_blank" rel="noopener">DataHub</a>服务，特别适用于增量数据的导入。</p>
+</li>
+<li><p>提供多种计算模型：</p>
+<ol>
+<li>SQL：以表的形式存储、操作数据</li>
+<li>UDF：用户自定义函数满足计算要求</li>
+<li>MapReduce编程模型：实现分布式计算</li>
+<li>SDK：它是MaxCompute提供给开发者的工具包，当前支持<a href="https://help.aliyun.com/document_detail/34614.html#concept-utw-vvc-5db" target="_blank" rel="noopener">Java SDK</a>及<a href="https://help.aliyun.com/document_detail/34615.html#concept-g14-4wb-wdb" target="_blank" rel="noopener">Python SDK</a>。</li>
+</ol>
+</li>
+</ol>
+<h2><span id="maxcompute与其他阿里云服务的集成使用">MaxCompute与其他阿里云服务的集成使用</span></h2><blockquote>
+<p>最重要的就是DataWorks，因为DataWorks控制台即为MaxCompute控制台。</p>
+</blockquote>
+<p>DataWorks：<a href="https://data.aliyun.com/product/ide" target="_blank" rel="noopener">DataWorks</a>是基于MaxCompute计算和存储，提供工作流可视化开发、调度运维托管的一站式海量数据离线加工分析平台。在大数据平台中，DataWorks控制台即为MaxCompute控制台。</p>
+<p>下图是MaxCompute与其他服务的集成，具体见<a href="https://help.aliyun.com/document_detail/57151.html?spm=a2c4g.11186623.6.549.42ba5b9cRCBsen" target="_blank" rel="noopener">官方文档</a>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011103059.png" alt></p>
+<h1><span id="2-程序员最常使用的模块">2. 程序员最常使用的模块</span></h1><pre class=" language-JAVA"><code class="language-JAVA">模块                说明
+MapReduce        MaxCompute提供的Java MapReduce编程模型。您可以使用MapReduce提供的接口（Java API）编写                    MapReduce程序，处理MaxCompute中的数据。
+Graph            一套面向迭代的图计算处理框架。使用图进行建模，图由点（Vertex）和边（Edge）组成，点和边包含                  权值（Value）。通过迭代对图进行编辑、演化，最终得出结果。
+Tunnel            您可以使用Tunnel服务向MaxCompute批量上传离线数据或从MaxCompute下载离线数据。
+Java SDK        向开发者提供的Java接口。
+Python SDK        向开发者提供的Python接口。</code></pre>
+<h1><span id="3-maxcompute术语表">3. MaxCompute术语表</span></h1><p><a href="https://help.aliyun.com/document_detail/27801.html?spm=a2c4g.11186623.6.552.761ecef0MhIpoQ" target="_blank" rel="noopener">术语表与基本概念介绍链接</a></p>
+<p>##　重要术语介绍</p>
+<ol>
+<li><p>项目：MaxComputed的基本组织单元，类似传统数据库中的database、Schema的概念，可以实现用户隔离。项目中包含了多个对象：表、资源、函数、实例等。</p>
+</li>
+<li><p>表：数据存储单元，分为内部表和外部表（MaxCompute并不真的保存外部表，仅仅保存其元数据）。</p>
+</li>
+</ol>
+<p><strong>注意</strong>： MaxCompute中的表包含了普通表和分区表（即表中存在分区的概念，下面介绍。）</p>
+<ol start="3">
+<li><p>分区：创建表时指定表内的一个或者某几个字段作为分区列。分区表实际就是对应分布式文件系统上的独立的文件夹，一个分区对应一个文件夹，文件夹下是对应分区所有的数据文件。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011124022.png" alt></p>
+</li>
+</ol>
+<p>通俗理解：根据指定字段的值将数据存储到不同的文件夹下，示例如下图。</p>
+<ol start="4">
+<li>资源：我们自己写的代码上传到MaxCompute即为资源，因此自定义函数（UDF）或MapReduce的使用都需要依赖资源。</li>
+<li>任务：见链接文档。</li>
+<li>实例：在MaxCompute中，SQL、Spark和Mapreduce任务在执行时会被实例化，以MaxCompute实例（下文简称为实例或Instance）的形式存在。实例会经历运行（Running）和结束（Terminated）两个阶段。</li>
+</ol>
+<h1><span id="4-maxcompute基础使用">4. MaxCompute基础使用</span></h1><p>使用过程总结：</p>
+<ol>
+<li>首先创建阿里云账号，然后开通MaxCompute服务，开通之后，创建自己的项目空间。</li>
+<li>可以通过阿里云提供的客户端（Odpscmd）进行操作或者自己写代码操作（操作包括数据的上传、下载、查询、计算等）。</li>
+</ol>
+<h2><span id="准备工作账号-开通maxcompute和配置客户端等">准备工作（账号、开通MaxCompute和配置客户端等）</span></h2><ol>
+<li>操作流程概览</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011130116.png" alt></p>
+<ol start="2">
+<li>根据<a href="https://help.aliyun.com/document_detail/27803.html?spm=a2c4g.11186623.6.586.28ce153agRDZgp" target="_blank" rel="noopener">官方文档</a>操作。</li>
+</ol>
+<h2><span id="体验maxcompute的简单操作">体验MaxCompute的简单操作</span></h2><blockquote>
+<p>上述准备工作完成之后，可以利用阿里云提供的公共数据集体验MaxCompute的简单操作</p>
+</blockquote>
+<ol>
+<li>进入MaxCompute控制台，流程如下：</li>
+</ol>
+<p><img src="C:%5CUsers%5Cwu152%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201011130046845.png" alt="image-20201011130046845"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011125900.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011125816.png" alt></p>
+<p>接下来按照<a href="https://help.aliyun.com/document_detail/185242.html?spm=a2c4g.11186623.6.594.6a3a6dc5sgjwHa" target="_blank" rel="noopener">官方教程</a>进行体验即可。【注】：通过odpscmd和页面操作都可以</p>
+<p>快速体验包括内容概览：</p>
+<ol>
+<li>如何使用页面/opdscmd进行MaxCompute操作</li>
+<li>如何通过sql语句进行MaxCompute操作</li>
+<li>如何编写MapReduce程序，并使用该程序</li>
+<li>如何编写Java UDF（自定义函数），并使用</li>
+<li>编写Graph</li>
+</ol>
+<h1><span id="5-通过maxcompute搭建分析平台">5. 通过MaxCompute搭建分析平台</span></h1><blockquote>
+<p>如果不是想通过MaxCompute搭建一个平台可以跳过该部分，可以直接看下文中如何实现数据的上传和下载</p>
+</blockquote>
+<h2><span id="所需了解的基本原理">所需了解的基本原理</span></h2><h3><span id="maxcompute数据仓库的架构和模型设计">MaxCompute数据仓库的架构和模型设计</span></h3><p>使用阿里云大数据产品MaxCompute配合DataWorks，完成整体的数据建模和研发流程。</p>
+<p>完整的技术架构图如下图所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011111504.png" alt></p>
+<p>其中，<strong>DataWorks的数据集成</strong>负责完成数据的采集和基本的ETL。<strong>MaxCompute</strong>作为整个大数据开发过程中的离线计算引擎。<strong>DataWorks</strong>则包括数据开发、数据质量、数据安全、数据管理等在内的一系列功能。<strong>上图中未知的名词见下方数仓分层的介绍和数据模型的介绍。</strong></p>
+<h3><span id="数仓分层">数仓分层</span></h3><p><a href="https://help.aliyun.com/document_detail/114447.html?spm=a2c4g.11186623.6.613.7e9e7997hfJvio" target="_blank" rel="noopener">数仓分层介绍链接</a></p>
+<h3><span id="数据模型介绍">数据模型介绍</span></h3><ol>
+<li>数据模型介绍概览</li>
+</ol>
+<p><img src="C:%5CUsers%5Cwu152%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201011112004254.png" alt="image-20201011112004254"></p>
+<ol start="2">
+<li><a href="https://help.aliyun.com/knowledge_list/114453.html?spm=a2c4g.11186623.6.614.1df8779ep5kPSm" target="_blank" rel="noopener">数据模型介绍链接</a></li>
+</ol>
+<h2><span id="从零搭建一个互联网在线运营分析平台">从零搭建一个互联网在线运营分析平台</span></h2><ol>
+<li>内容概览</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011112603.png" alt></p>
+<ol start="2">
+<li><a href="https://help.aliyun.com/document_detail/122338.html?spm=a2c4g.11186623.6.621.5ee610bb4YmaAh" target="_blank" rel="noopener">搭建教程链接</a></li>
+</ol>
+<h1><span id="6-如何使用maxcompute进行开发">6. 如何使用MaxCompute进行开发</span></h1><h2><span id="maxcompute支持的数据类型">MaxCompute支持的数据类型</span></h2><ol>
+<li><p>数据类型包括1.0和2.0两个版本，2.0在1.0的基础上进行了扩充。</p>
+</li>
+<li><p><a href="https://help.aliyun.com/document_detail/159542.html?spm=a2c4g.11186623.6.640.6d0d134dMnRn1L" target="_blank" rel="noopener">1.0数据类型介绍链接</a></p>
+</li>
+<li><p><a href="https://help.aliyun.com/document_detail/159541.html?spm=a2c4g.11186623.6.641.4fb744f66jtcS9" target="_blank" rel="noopener">2.0数据类型介绍链接</a></p>
+</li>
+<li><p><a href="https://help.aliyun.com/document_detail/159540.html?spm=a2c4g.11186623.6.642.14ed44f6LsIAtf" target="_blank" rel="noopener">Hive兼容数据类型介绍链接</a></p>
+</li>
+<li><p><a href="https://help.aliyun.com/document_detail/159538.html?spm=a2c4g.11186623.6.643.2b9c4a7d1cbFyI" target="_blank" rel="noopener">阿里云不同组件之间数据类型兼容</a></p>
+</li>
+</ol>
+<h2><span id="常用命令">常用命令</span></h2><ol>
+<li>概览</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011130151.png" alt></p>
+<ol start="2">
+<li><a href="https://help.aliyun.com/document_detail/27827.html?spm=a2c4g.11186623.6.645.2e9e7956vBXhaR" target="_blank" rel="noopener">官方链接</a></li>
+</ol>
+<h2><span id="数据的上传和下载">数据的上传和下载</span></h2><blockquote>
+<p>MaxCompute提供了两种数据上传下载的通道：</p>
+</blockquote>
+<ul>
+<li>DataHub实时数据通道：适合增量数据。 提供了SDK</li>
+<li>Tunnel批量数据通道：适合全量数据，海量数据。提供了SDK</li>
+</ul>
+<h3><span id="datahub和tunnel的使用限制">DataHub和Tunnel的使用限制</span></h3><p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011130236.png" alt></p>
+<h3><span id="数据迁移到maxcompute的方式">数据迁移到MaxCompute的方式</span></h3><blockquote>
+<p>对于以下三种数据源迁移数据到MaxCompute都有特定的工具和方式，具体见<a href="https://help.aliyun.com/document_detail/51655.html?spm=a2c4g.11186623.6.657.1a7b3ba42ler8d" target="_blank" rel="noopener">官方教程</a>。</p>
+</blockquote>
+<ol>
+<li>从Hadoop迁移</li>
+<li>数据库数据同步</li>
+<li>日志采集</li>
+</ol>
+<h3><span id="通过tunnel进行数据上传下载">通过Tunnel进行数据上传下载</span></h3><blockquote>
+<p>1.通过Opds客户端，执行Tunnel命令，完成数据上传下载，<a href="https://help.aliyun.com/document_detail/143537.html?spm=a2c4g.11186623.6.660.7c93687dkMy5VX" target="_blank" rel="noopener">官方文档链接</a>，该部分不详细介绍。</p>
+<p>2.通过SDK，需要程序员写代码完成数据上传下载，<a href="https://help.aliyun.com/document_detail/27837.html?spm=a2c4g.11186623.6.663.297f2adbBJDsyw" target="_blank" rel="noopener">官方文档链接</a>，该部分接下来详细说明。</p>
+</blockquote>
+<h4><span id="通过tunnel-sdk完成数据的上传和下载">通过Tunnel SDK完成数据的上传和下载</span></h4><p><a href="https://help.aliyun.com/document_detail/27837.html?spm=a2c4g.11186623.6.663.297f2adbBJDsyw" target="_blank" rel="noopener">Tunnel SDK的java Doc文档</a></p>
+<ol>
+<li>主要接口，由于会不断更新，具体以Doc文档为准</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201011133320.png" alt></p>
+<p>主要接口的详细介绍见<a href="https://help.aliyun.com/document_detail/27838.html?spm=a2c4g.11186623.6.664.bb525284UBXANI" target="_blank" rel="noopener">官方文档</a>（不太重要，可以直接看官方提供的SDK上传、下载数据的示例）。</p>
+<ol start="2">
+<li>使用Tunnel SDK需要先在maven工程中导入jar包</li>
+</ol>
+<p>在pom.xml文件中加入：</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+    <span class="token operator">&lt;</span>groupId<span class="token operator">></span>com<span class="token punctuation">.</span>aliyun<span class="token punctuation">.</span>odps<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+    <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>odps<span class="token operator">-</span>sdk<span class="token operator">-</span>core<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+    <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">0.24</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token operator">-</span><span class="token keyword">public</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span> <span class="token comment" spellcheck="true">//该部分版本可以替换为最新版</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></code></pre>
+<ol start="3">
+<li>通过Tunnel SDK上传和下载数据示例</li>
+</ol>
+
             </div>
             <hr/>
 
@@ -522,7 +670,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://DeepWu.github.io/2020/051319279.html">http://DeepWu.github.io/2020/051319279.html</a>
+                    <a href="http://DeepWu.github.io/2020/101215368.html">http://DeepWu.github.io/2020/101215368.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -559,15 +707,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E8%AE%BA%E6%96%87/">
-                                    <span class="chip bg-color">论文</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
-                                    <span class="chip bg-color">研究生</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -733,9 +873,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/101215368.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="1. 什么是MaxCompute">
+                        
+                        <span class="card-title">1. 什么是MaxCompute</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            [toc]
+MaxCompute(OPDS)官方教程
+1. 什么是MaxCompute?
+MaxCompute提供了大量数据的存储以及分布式计算模型，即在阿里云开通MaxCompute之后可以存储海量数据以及通过其提供的计算模型进行数据分析
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            DeepWu
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/100833718.html">
                     <div class="card-image">
@@ -759,9 +941,9 @@ rabbitmq内部结构主要包括交换机和队列，通过交换机与队列不
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -769,58 +951,6 @@ rabbitmq内部结构主要包括交换机和队列，通过交换机与队列不
                             
                         </span>
                     </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/050919279.html">
-                    <div class="card-image">
-                        
-                        <img src="http://q9nd0oq0r.bkt.clouddn.com/5.b.jpg" class="responsive-img" alt="研究生小论文写作指南">
-                        
-                        <span class="card-title">研究生小论文写作指南</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            对于研究生小论文的结构、各部分书写内容进行说明。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-09
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%86%99%E4%BD%9C/" class="post-category">
-                                    写作
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%AE%BA%E6%96%87/">
-                        <span class="chip bg-color">论文</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
-                        <span class="chip bg-color">研究生</span>
-                    </a>
-                    
                 </div>
                 
             </div>
