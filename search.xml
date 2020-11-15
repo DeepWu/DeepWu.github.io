@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>记录博客使用教程</title>
+      <link href="/2020/111552018.html"/>
+      <url>/2020/111552018.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>redis避坑</title>
+      <link href="/2020/111526651.html"/>
+      <url>/2020/111526651.html</url>
+      
+        <content type="html"><![CDATA[<p>title: redis连接自动断开可能的原因<br>author: DeepWu<br>img: <a href="http://q9nd0oq0r.bkt.clouddn.com/4.b.jpg" target="_blank" rel="noopener">http://q9nd0oq0r.bkt.clouddn.com/4.b.jpg</a><br>top: true<br>cover: true<br>coverImg: <a href="http://q9nd0oq0r.bkt.clouddn.com/4.b.jpg" target="_blank" rel="noopener">http://q9nd0oq0r.bkt.clouddn.com/4.b.jpg</a><br>toc: true<br>summary: Linux目录及软件，包括Linux系统目录介绍、Xshell、XFTP、SecureCRT、Vim等软件使用方法<br>categories: 开发<br>tags:</p><ul><li>大数据开发</li><li>Linux<br>abbrlink: 19279<br>date: 2020-05-06 17:15:00</li></ul><h1><span id="redis断开连接原因1">redis断开连接原因1</span></h1><blockquote><p>redis服务器有个客户端缓冲区，默认为1G。如果向其发送大量命令，redis执行后返回的数据会在其中，如果这些数据超过1G，则redis服务器会自动断开连接。</p></blockquote><h1><span id="redis断开连接原因2">redis断开连接原因2</span></h1><blockquote><p>jedisPipe管道发送大量数据（百万条）不仅会造成数据丢失，还可能自动断开连接。</p></blockquote><h1><span id="redis断开连接原因3">redis断开连接原因3</span></h1><blockquote><p>redis是单线程的，如果用同一个redis多线程发送（或者全局变量为一个jedis，外面通过多线程调用发送都可能导致连接断开。）</p><p>解决方法：每发送一批数据从连接池中获取一个redis，用完还给连接池。</p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>1. 什么是MaxCompute</title>
       <link href="/2020/101215368.html"/>
       <url>/2020/101215368.html</url>
@@ -46,9 +72,9 @@
       
         <tags>
             
-            <tag> 论文 </tag>
-            
             <tag> 研究生 </tag>
+            
+            <tag> 论文 </tag>
             
         </tags>
       
@@ -73,9 +99,9 @@
       
         <tags>
             
-            <tag> 论文 </tag>
-            
             <tag> 研究生 </tag>
+            
+            <tag> 论文 </tag>
             
         </tags>
       
@@ -171,7 +197,7 @@
       <link href="/2020/050119279.html"/>
       <url>/2020/050119279.html</url>
       
-        <content type="html"><![CDATA[<h1><span id="基于hexo的博客搭建和更新">基于hexo的博客搭建和更新</span></h1><h2><span id="博客搭建教程">博客搭建教程</span></h2><ul><li><p><a href="https://www.bilibili.com/video/BV1je41147Ma?p=1" target="_blank" rel="noopener">B站视频教程</a></p></li><li><p><a href="https://rika0-0.github.io/" target="_blank" rel="noopener">博客教程地址</a></p></li><li><p><a href="https://blog.csdn.net/jspnetcn/article/details/104111651" target="_blank" rel="noopener">博客主题设置与优化地址</a></p></li></ul><h1><span id="博客安装-启动指南">博客安装、启动指南</span></h1><ol><li><a href="https://hexoscript.gitbook.io/hexo-script/shi-yong-bu-zhou/yi-jian-an-zhuang-hexo-bo-ke" target="_blank" rel="noopener">博客安装官方指南</a></li></ol><h1><span id="博客本地测试-远程更新">博客本地测试、远程更新</span></h1><h2><span id="本地查看博客">本地查看博客</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//cmd中执行</span>cd hexoblog  <span class="token comment" spellcheck="true">//进入hexoblog文件夹</span>hexo s       <span class="token comment" spellcheck="true">//启动博客</span><span class="token comment" spellcheck="true">//打开cmd中的网址，进入博客</span></code></pre><h2><span id="远程更新博客">远程更新博客</span></h2><pre class=" language-java"><code class="language-java">source up<span class="token punctuation">.</span>sh</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1><span id="基于hexo的博客搭建和更新">基于hexo的博客搭建和更新</span></h1><h2><span id="博客搭建教程">博客搭建教程</span></h2><ul><li><p><a href="https://www.bilibili.com/video/BV1je41147Ma?p=1" target="_blank" rel="noopener">B站视频教程</a></p></li><li><p><a href="https://rika0-0.github.io/" target="_blank" rel="noopener">博客教程地址</a></p></li><li><p><a href="https://blog.csdn.net/jspnetcn/article/details/104111651" target="_blank" rel="noopener">博客主题设置与优化地址</a></p></li></ul><h1><span id="博客安装-启动指南">博客安装、启动指南</span></h1><ol><li><a href="https://hexoscript.gitbook.io/hexo-script/shi-yong-bu-zhou/yi-jian-an-zhuang-hexo-bo-ke" target="_blank" rel="noopener">博客安装官方指南</a></li></ol><h1><span id="博客本地测试-远程更新">博客本地测试、远程更新</span></h1><h2><span id="本地查看博客">本地查看博客</span></h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//cmd中执行</span>cd hexoblog  <span class="token comment" spellcheck="true">//进入hexoblog文件夹</span>hexo s       <span class="token comment" spellcheck="true">//启动博客</span><span class="token comment" spellcheck="true">//打开cmd中的网址，进入博客</span></code></pre><h2><span id="远程更新博客">远程更新博客</span></h2><pre class=" language-java"><code class="language-java">source up<span class="token punctuation">.</span>sh</code></pre><h1><span id="新建博客">新建博客</span></h1><blockquote><p>进入博客目录的hexoblog目录</p><p>hexo new “新文章的名字”         // 在source /_post目录下创建.md文档</p></blockquote><h1><span id="发布过程">发布过程</span></h1><blockquote><p>hexo clean //清理public文件夹及其内容</p><p>hexo g   //生成public文件夹及其内容</p><p>hexo s  // 预览</p><p>localhost:4000  // 网址预览</p><p>hexo d   //发布</p></blockquote>]]></content>
       
       
       <categories>
