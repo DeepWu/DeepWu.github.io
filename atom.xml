@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://deepwu.github.io/"/>
-  <updated>2020-11-15T04:00:15.009Z</updated>
+  <updated>2020-11-15T04:30:08.385Z</updated>
   <id>http://deepwu.github.io/</id>
   
   <author>
@@ -17,73 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>记录博客使用教程</title>
-    <link href="http://deepwu.github.io/2020/111552018.html"/>
-    <id>http://deepwu.github.io/2020/111552018.html</id>
-    <published>2020-11-15T04:00:14.000Z</published>
-    <updated>2020-11-15T04:00:15.009Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>redis避坑</title>
-    <link href="http://deepwu.github.io/2020/111526651.html"/>
-    <id>http://deepwu.github.io/2020/111526651.html</id>
-    <published>2020-11-15T03:34:44.387Z</published>
-    <updated>2020-11-15T03:42:14.602Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;title: redis连接自动断开可能的原因&lt;br&gt;author: DeepWu&lt;br&gt;img: &lt;a href=&quot;http://q9nd0oq0r.bkt.clouddn.com/4.b.jpg&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>1. 什么是MaxCompute</title>
-    <link href="http://deepwu.github.io/2020/101215368.html"/>
-    <id>http://deepwu.github.io/2020/101215368.html</id>
-    <published>2020-10-12T13:40:43.733Z</published>
-    <updated>2020-11-15T03:30:01.988Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;[toc]&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://help.aliyun.com/product/27797.html?spm=a2c4g.11186623.6.540.2a4681d6qjoxaC&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>rabbitmq</title>
-    <link href="http://deepwu.github.io/2020/100833718.html"/>
-    <id>http://deepwu.github.io/2020/100833718.html</id>
-    <published>2020-10-08T13:02:24.792Z</published>
-    <updated>2020-10-09T14:31:12.909Z</updated>
+    <title>rabbitmq使用总结</title>
+    <link href="http://deepwu.github.io/2020/111565466.html"/>
+    <id>http://deepwu.github.io/2020/111565466.html</id>
+    <published>2020-11-15T04:28:42.000Z</published>
+    <updated>2020-11-15T04:30:08.385Z</updated>
     
     <summary type="html">
     
@@ -95,6 +33,23 @@
 &lt;h1&gt;&lt;span
         
       
+    
+    </summary>
+    
+    
+    
+      <category term="java开源服务" scheme="http://DeepWu.github.io/tags/java%E5%BC%80%E6%BA%90%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录博客使用教程</title>
+    <link href="http://deepwu.github.io/2020/111552018.html"/>
+    <id>http://deepwu.github.io/2020/111552018.html</id>
+    <published>2020-11-15T04:00:14.000Z</published>
+    <updated>2020-11-15T04:16:11.947Z</updated>
+    
+    <summary type="html">
     
     </summary>
     
