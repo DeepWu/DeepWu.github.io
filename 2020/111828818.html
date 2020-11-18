@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="大数据开发之Linux学习二, DeepWu">
+    <meta name="keywords" content="keras中模型的搭建，以及输入数据格式的理解, DeepWu">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>大数据开发之Linux学习二 | DeepWu</title>
+    <title>keras中模型的搭建，以及输入数据格式的理解 | DeepWu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://q9nd0oq0r.bkt.clouddn.com/4.b.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">大数据开发之Linux学习二</h1>
+                    <h1 class="description center-align post-title">keras中模型的搭建，以及输入数据格式的理解</h1>
                 </div>
             </div>
         </div>
@@ -441,27 +441,18 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/">
-                                <span class="chip bg-color">大数据开发</span>
+                            <a href="/tags/keras/">
+                                <span class="chip bg-color">keras</span>
                             </a>
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                                <span class="chip bg-color">神经网络</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%BC%80%E5%8F%91/" class="post-category">
-                                开发
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -470,21 +461,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-06
+                    2020-11-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-07
+                    2020-11-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    619
                 </div>
                 
 
@@ -496,141 +487,63 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="大数据开发之linux学习二">大数据开发之Linux学习二</span></h1><h2><span id="linux系统目录介绍">Linux系统目录介绍</span></h2><ol>
-<li>Linux中一切皆文件。主要文件目录结构如下图：</li>
-</ol>
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.1.jpg" alt="Linux系统主要目录结构" style="zoom: 80%;">
+                <p>[toc]</p>
+<h1><span id="1-keras框架搭建模型的两种方式">1. keras框架搭建模型的两种方式</span></h1><h2><span id="11-基于kerasmodelssequential的模型构建方法">1.1 基于keras.models.Sequential()的模型构建方法</span></h2><p>粗糙的示例代码：</p>
+<pre class=" language-python"><code class="language-python">model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span> 
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">,</span> input_dim<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span> model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dropout<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span> model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'sigmoid'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>解析：该方法的开始位置需要指定input_shape（输入数据的shape）。涉及到对文本数据训练的神经网络，其输入数据会转换为Embedding（Embedding：由小数组成的一维数组），然后再进行训练。</p>
+<h2><span id="12-kerasmodelsmodel的模型构建方法">1.2 keras.models.Model的模型构建方法</span></h2><p>粗糙的示例代码：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">from</span> tensorflow <span class="token keyword">import</span> keras
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras <span class="token keyword">import</span> layers
 
-<ol start="2">
-<li>各个文件的主要功能如下：</li>
-</ol>
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.2.jpg" alt="文件功能图1" style="zoom: 80%;">
+<span class="token comment" spellcheck="true"># 搭建模型</span>
+inp <span class="token operator">=</span> keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+outp <span class="token operator">=</span> layers<span class="token punctuation">.</span>Dense<span class="token punctuation">(</span>num_categories<span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">"softmax"</span><span class="token punctuation">)</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span>
+model <span class="token operator">=</span> keras<span class="token punctuation">.</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">(</span>inputs<span class="token operator">=</span>inp<span class="token punctuation">,</span> outputs<span class="token operator">=</span>outp<span class="token punctuation">)</span>
 
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.3.jpg" alt="文件功能图2" style="zoom:67%;">
-
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.4.jpg" alt="文件功能图1" style="zoom: 67%;">
-
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.5.jpg" alt="文件功能图2" style="zoom: 80%;">
-
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.6.jpg" alt="文件功能图1" style="zoom:67%;">
-
-<h2><span id="远程操作linux系统的工具xshell-xftp">远程操作Linux系统的工具（Xshell、XFTP）</span></h2><ol>
-<li>为什么使用远程工具？</li>
-</ol>
-<p>公司中服务器通常为开发小组公用（通常位于工作地点很远的地方），因此需要远程登陆Linux系统进行操作。常用工具包括Xshell、XFTP等。</p>
-<ol start="2">
-<li>两种软件使用要求：</li>
-</ol>
-<p><strong>Linux系统必须开启sshd服务，该服务会监听22号端口。</strong> </p>
-<p>查看sshd服务是否开启方法：</p>
-<pre class=" language-java"><code class="language-java">setup   <span class="token operator">-</span>》   系统服务   <span class="token operator">-</span>》   标记星号的服务表示已启动的服务</code></pre>
-<h3><span id="xshell用于远程操作linux系统">Xshell用于远程操作Linux系统</span></h3><p>软件的安装与连接设置：</p>
-<pre class=" language-java"><code class="language-java"><span class="token number">1</span><span class="token punctuation">.</span>下载软件，进行安装。
-<span class="token number">2</span><span class="token punctuation">.</span>打开软件，新建一个会话（即新建一个连接）如下图参数设置。该步骤需要Linux的IP地址。
-<span class="token number">3</span><span class="token punctuation">.</span>在Linux系统的终端中输入ifconfig查询LinuxIP地址。
-<span class="token number">4</span><span class="token punctuation">.</span>输入用户名和密码，完成登陆</code></pre>
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.7.jpg" alt="Xshell新建会话属性设置图" style="zoom: 67%;">
-
-<h3><span id="xftp用于远程上传和下载文件">Xftp用于远程上传和下载文件</span></h3><p>软件的安装与连接设置：</p>
-<pre class=" language-java"><code class="language-java"><span class="token number">1</span><span class="token punctuation">.</span>下载安装Xftp软件
-<span class="token number">2</span><span class="token punctuation">.</span>新建会话，配置会话参数，如下图所示。
-<span class="token number">3</span><span class="token punctuation">.</span>连接后，Linux目录可能出现中文乱码。按照中文乱码解决图操作，然后右键刷新。</code></pre>
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.8.jpg" alt="Xftp会话" style="zoom: 80%;">
-
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.9.png" alt="中文乱码解决图" style="zoom: 67%;">
-
-<h3><span id="securecrt远程登陆linux系统软件的使用">SecureCRT远程登陆linux系统软件的使用</span></h3><p>为什么需要？（大数据开发中常用）</p>
+<span class="token comment" spellcheck="true"># 训练</span>
+<span class="token comment" spellcheck="true"># 配置模型， 设置损失函数，梯度下降迭代方法（优化器optimizer）</span>
+model<span class="token punctuation">.</span>compile<span class="token punctuation">(</span>loss<span class="token operator">=</span>tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>losses<span class="token punctuation">.</span>MeanSquaredError<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  optimizer<span class="token operator">=</span>keras<span class="token punctuation">.</span>optimizers<span class="token punctuation">.</span>RMSprop<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime
+    TIMESTAMP <span class="token operator">=</span> <span class="token string">"{0:%Y-%m-%dT%H-%M-%S\\}"</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 生成tensorboard日志，可用于打开tensorboard（可以看到损失函数曲线，模型结构等）</span>
+    tensorboard_callback <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>callbacks<span class="token punctuation">.</span>TensorBoard<span class="token punctuation">(</span>log_dir<span class="token operator">=</span><span class="token string">"E:\\datas\\logs\\logs_1"</span> <span class="token operator">+</span> TIMESTAMP<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 训练模型</span>
+    history <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>
+        x<span class="token operator">=</span>x<span class="token punctuation">,</span>
+        y<span class="token operator">=</span>y<span class="token punctuation">,</span>
+        batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">,</span>
+        epochs<span class="token operator">=</span>epochs<span class="token punctuation">,</span>
+        verbose<span class="token operator">=</span>verbose<span class="token punctuation">,</span>
+        callbacks<span class="token operator">=</span><span class="token punctuation">[</span>tensorboard_callback<span class="token punctuation">]</span>
+    <span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 保存训练好的模型</span>
+    model<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"E:\\datas\\datas\\ml-latest-small\\tensorflow_two_tower.h5"</span><span class="token punctuation">)</span></code></pre>
+<h1><span id="keras中模型的输入数据理解">keras中模型的输入数据理解</span></h1><p>通过model.fit(x = x ,y = y)方法  向模型中输入数据，并训练</p>
 <blockquote>
-<p>Xshell软件有时安装后缺少.dll文件</p>
+<p>其中输入数据x的第一维度（最外层[]）的大小等于 模型中的输入数量 </p>
 </blockquote>
-<p>​        安装与连接设置？</p>
-<pre class=" language-java"><code class="language-java"><span class="token number">1</span><span class="token punctuation">.</span>下载安装SecureCRT软件并安装
-<span class="token number">2</span><span class="token punctuation">.</span>连接、新建会话
-<span class="token number">3</span><span class="token punctuation">.</span>按照提示，点击下一步
-<span class="token number">4</span><span class="token punctuation">.</span>配置会话，如下图
-<span class="token number">5</span><span class="token punctuation">.</span>连接，输入用户名和密码登陆Linux
-<span class="token number">6</span><span class="token punctuation">.</span>中文乱码解决图如下图。</code></pre>
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.10.jpg" alt="SecureCRT会话配置图" style="zoom:67%;">
+<p>示例：</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 假设模型 </span>
+<span class="token keyword">def</span> <span class="token function">get_model</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    inp1 <span class="token operator">=</span> keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    inp2 <span class="token operator">=</span> keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    inp3 <span class="token operator">=</span> keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">return</span> keras<span class="token punctuation">.</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">(</span>inputs<span class="token operator">=</span><span class="token punctuation">[</span>inp1<span class="token punctuation">,</span>inp2<span class="token punctuation">,</span>inp3<span class="token punctuation">]</span><span class="token punctuation">,</span> outputs<span class="token operator">=</span>outp<span class="token punctuation">)</span>
 
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.11.jpg" alt="SecureCRT中文乱码解决图" style="zoom:67%;">
-
-<h2><span id="文本编辑器vi-vim">文本编辑器（Vi、Vim）</span></h2><blockquote>
-<p>vim可以看作vi的增强版，都是文本编辑器</p>
-</blockquote>
-<ol>
-<li>编辑器三种模式</li>
-</ol>
-<pre class=" language-jav"><code class="language-jav">1.正常模式：
-可以使用各种快捷键完成文档的编辑工作，包括：光标移动、删除整行、删除字符、复制粘贴等。
-2.插入模式/编辑模式：
-该模式下，程序员可以输入内容。按下i l o O a A r R等任意一个字母之后进入编辑模式
-3. 命令行模式
-提供相关指令，完成读取、存盘、显示行号等动作</code></pre>
-<img src="http://q9nd0oq0r.bkt.clouddn.com/4.12.jpg" alt="三种模式切换指令图" style="zoom: 80%;">
-
-<ol start="2">
-<li>常用指令整理(<a href="https://www.jianshu.com/p/0d2d2ec71408" target="_blank" rel="noopener">引用链接</a>)</li>
-</ol>
-<pre class=" language-java"><code class="language-java">切换到输入模式
-
-i    在光标前插入                                I    跳到当前行句首进入输入模式
-a<span class="token punctuation">,</span>    在光标后插入                                A    跳到当前行句尾进入输入模式
-o    跳到下一行并创建新的一行进入输入模式<span class="token punctuation">(</span>常用<span class="token punctuation">)</span>      O      跳到上一行并创建新的一行进入输入模式
-r    进入取代模式一次，替换后进入移动模式    
-R    进入取代模式，直到按Esc后退出进入移动模式
-
-移动
-k<span class="token punctuation">,</span> j<span class="token punctuation">,</span> h<span class="token punctuation">,</span> <span class="token function">l</span>    <span class="token punctuation">(</span>↑<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>↓<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>←<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>→<span class="token punctuation">)</span><span class="token punctuation">,</span> 向下移动<span class="token number">4</span>行，可以 4j，又或者 <span class="token number">4</span> <span class="token operator">&lt;</span>Enter<span class="token operator">></span>
-gg    回到开头
-G    移动到这个档案的最后一行
-行数<span class="token operator">+</span>G    跳到所输入行数的那一行
-<span class="token number">0</span> ，<span class="token punctuation">[</span>Home<span class="token punctuation">]</span>，<span class="token operator">^</span>    跳到当前行行头，个人喜欢用I
-$ <span class="token punctuation">,</span> <span class="token punctuation">[</span>End<span class="token punctuation">]</span>    跳到当前行行尾，个人喜欢用A
-H，M， L    移动到这个屏幕的最上方，中间，最下方的第一个字符
-<span class="token operator">+</span>，<span class="token operator">-</span>    光标移动到非空格符的下，上一行
-w，b，e    下一个词词首，上一个词词首，e跳到这个单词词尾
-Ctrl<span class="token operator">+</span> <span class="token punctuation">[</span>f<span class="token punctuation">]</span><span class="token punctuation">[</span>b<span class="token punctuation">]</span>，<span class="token punctuation">[</span>b<span class="token punctuation">]</span><span class="token punctuation">[</span>b<span class="token punctuation">]</span>    下，上翻页
-Ctrl<span class="token operator">+</span> <span class="token punctuation">[</span>d<span class="token punctuation">]</span><span class="token punctuation">[</span>b<span class="token punctuation">]</span>，<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>b<span class="token punctuation">]</span>    下，上翻半页
-f 字母    查找并跳到字母
-
-修改
-
-c i <span class="token string">'    到这行的'</span> <span class="token string">'里面，并清空'</span> '里面的内容，进入输入模式<span class="token punctuation">,</span><span class="token punctuation">(</span>c是修改的意思<span class="token punctuation">)</span>
-dd    删除当前行
-d i w    删除当前单词<span class="token punctuation">,</span> d f space把单词后面的空格也删除掉 还有d t 空格<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-yy    复制当前行
-nyy    n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 <span class="token number">20</span> 行<span class="token punctuation">(</span>常用<span class="token punctuation">)</span>
-p<span class="token punctuation">,</span> P    p是将已复制的数据在光标下一行贴上<span class="token punctuation">,</span> P是上一行
-u    撤销
-<span class="token punctuation">.</span>    重复前一个动作
-<span class="token operator">:</span><span class="token operator">%</span>s<span class="token operator">/</span>word1<span class="token operator">/</span>word2<span class="token operator">/</span>g    从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！<span class="token punctuation">(</span>常用<span class="token punctuation">)</span>
-<span class="token operator">:</span>wq    储存后离开，若为 <span class="token operator">:</span>wq<span class="token operator">!</span> 则为强制储存后离开 <span class="token punctuation">(</span>常用<span class="token punctuation">)</span>
-<span class="token operator">:</span>w <span class="token punctuation">[</span>filename<span class="token punctuation">]</span>    将编辑的数据储存成另一个档案（类似另存新档）
-
-注释
-添加注释
-方法一：<span class="token punctuation">[</span>Ctrl<span class="token punctuation">]</span><span class="token punctuation">[</span>b<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">[</span>b<span class="token punctuation">]</span> 或 <span class="token punctuation">[</span>V<span class="token punctuation">]</span><span class="token punctuation">[</span>b<span class="token punctuation">]</span>，进入选择模式，选中你要注释的行，然后按 <span class="token punctuation">[</span>I<span class="token punctuation">]</span><span class="token punctuation">[</span>b<span class="token punctuation">]</span><span class="token punctuation">,</span>输入注释符<span class="token punctuation">.</span>
-方法二： <span class="token operator">:</span>起始行号<span class="token punctuation">,</span>结束行号s<span class="token operator">/</span><span class="token operator">^</span><span class="token operator">/</span>注释符<span class="token operator">/</span>g（注意冒号）。
-
-删除注释
-方法一：Ctrl <span class="token operator">+</span> v 进入块选择模式，选中你要删除的行首的注释符号，注意 <span class="token comment" spellcheck="true">// 要选中两个，选好之后按 d 即可删除注释，ESC 保存退出。</span>
-方法二： <span class="token operator">:</span>起始行号<span class="token punctuation">,</span>结束行号s<span class="token operator">/</span><span class="token operator">^</span>注释符<span class="token comment" spellcheck="true">//g（注意冒号）。</span>
-
-分屏
-命令模式下：
-<span class="token operator">:</span><span class="token keyword">new</span>，新建文件并分屏， 快捷键，Ctrl<span class="token operator">+</span>W，然后马上按n键
-<span class="token operator">:</span>spilt 水平分屏，将当前屏分为两个，水平的。 Ctrl <span class="token operator">+</span> w<span class="token punctuation">,</span> s
-<span class="token operator">:</span>vsplit 垂直分屏，将当前屏分为两个，垂直的。 Ctrl <span class="token operator">+</span> w<span class="token punctuation">,</span> v
-<span class="token operator">:</span>only 取消分屏，取消当前的屏，当前屏指的是光标所在屏。
-
-关闭当前屏<span class="token operator">:</span> Ctrl<span class="token operator">+</span>w，c。
-
-如何关闭其他窗口<span class="token operator">?</span>
-Ctrl <span class="token operator">+</span> w<span class="token punctuation">,</span> o
-
-载入文件
-<span class="token operator">:</span>vs 文件路径<span class="token operator">/</span>文件名 在新的垂直分屏中打开文件
-<span class="token operator">:</span>sv 水平分屏打开文件</code></pre>
+model <span class="token operator">=</span> get_model<span class="token punctuation">(</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x <span class="token operator">=</span> x<span class="token punctuation">,</span> y <span class="token operator">=</span> y<span class="token punctuation">)</span>
+注释<span class="token number">1</span>：那么x的第一个维度的大小必须是<span class="token number">3</span>，根据第一维度，可以将数据分成<span class="token number">3</span>个部分，每个部分对应模型中的一个输入（inp1<span class="token punctuation">,</span>inp2<span class="token punctuation">,</span>inp3）。
+注释<span class="token number">2</span>：x的第<span class="token number">2</span>层括号的shape必须为（数据条数，inp1<span class="token operator">/</span>inp2<span class="token operator">/</span>inp3的shape）。  比如：上面的输入可以是 ： <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>　<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span>，最外层维度为总的用于训练的数据条数（也就是两条数据）。
+  看不懂，看下面的图：</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201118204944.png" alt></p>
+<p>示例输入： [ [[1,2,3],[4,5,6],[7,8,9]],[[1,2],[3,4],[5,6]],[[1],[3],[6]] ]    shape为(3, 3, None) </p>
+<p>第一个3说明其对应三个输入，第二个三说明有三条数据用于训练，最后的None是因为每个输入的维度都不同，所以用None代替</p>
 
             </div>
             <hr/>
@@ -656,7 +569,7 @@ Ctrl <span class="token operator">+</span> w<span class="token punctuation">,</s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://DeepWu.github.io/2020/050619279.html">http://DeepWu.github.io/2020/050619279.html</a>
+                    <a href="http://DeepWu.github.io/2020/111828818.html">http://DeepWu.github.io/2020/111828818.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -694,12 +607,12 @@ Ctrl <span class="token operator">+</span> w<span class="token punctuation">,</s
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/">
-                                    <span class="chip bg-color">大数据开发</span>
+                                <a href="/tags/keras/">
+                                    <span class="chip bg-color">keras</span>
                                 </a>
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                                    <span class="chip bg-color">神经网络</span>
                                 </a>
                             
                         </div>
@@ -867,49 +780,51 @@ Ctrl <span class="token operator">+</span> w<span class="token punctuation">,</s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/050919279.html">
+                <a href="/2020/111828818.html">
                     <div class="card-image">
                         
-                        <img src="http://q9nd0oq0r.bkt.clouddn.com/5.b.jpg" class="responsive-img" alt="研究生小论文写作指南">
                         
-                        <span class="card-title">研究生小论文写作指南</span>
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="keras中模型的搭建，以及输入数据格式的理解">
+                        
+                        <span class="card-title">keras中模型的搭建，以及输入数据格式的理解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对于研究生小论文的结构、各部分书写内容进行说明。
+                            [toc]
+1. keras框架搭建模型的两种方式1.1 基于keras.models.Sequential()的模型构建方法粗糙的示例代码：
+model = Sequential() 
+model.add(Dense(64, input_
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-18
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%86%99%E4%BD%9C/" class="post-category">
-                                    写作
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            DeepWu
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
-                        <span class="chip bg-color">研究生</span>
+                    <a href="/tags/keras/">
+                        <span class="chip bg-color">keras</span>
                     </a>
                     
-                    <a href="/tags/%E8%AE%BA%E6%96%87/">
-                        <span class="chip bg-color">论文</span>
+                    <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">神经网络</span>
                     </a>
                     
                 </div>
@@ -923,32 +838,35 @@ Ctrl <span class="token operator">+</span> w<span class="token punctuation">,</s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/050519279.html">
+                <a href="/2020/111565466.html">
                     <div class="card-image">
                         
-                        <img src="http://q9nd0oq0r.bkt.clouddn.com/3.b.jpg" class="responsive-img" alt="大数据开发之Linux学习一">
                         
-                        <span class="card-title">大数据开发之Linux学习一</span>
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="rabbitmq使用总结">
+                        
+                        <span class="card-title">rabbitmq使用总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Linux相关知识一，包括Linux简介、虚拟机和Linux安装、Linux终端和联网
+                            [toc]
+rabbitmq是什么？
+rabbitmq是一个消息中间件，即负责接收发送端的消息，将消息存储，并将消息发送给接收端如下图。
+
+
+
+rabbitmq内部结构主要包括交换机和队列，通过交换机与队列不同的绑定模式使得rabbitmq
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-15
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%BC%80%E5%8F%91/" class="post-category">
-                                    开发
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            DeepWu
                             
                         </span>
                     </div>
@@ -956,12 +874,8 @@ Ctrl <span class="token operator">+</span> w<span class="token punctuation">,</s
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">大数据开发</span>
-                    </a>
-                    
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/java%E5%BC%80%E6%BA%90%E6%9C%8D%E5%8A%A1/">
+                        <span class="chip bg-color">java开源服务</span>
                     </a>
                     
                 </div>

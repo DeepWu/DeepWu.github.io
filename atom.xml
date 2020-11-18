@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://deepwu.github.io/"/>
-  <updated>2020-11-15T04:30:08.385Z</updated>
+  <updated>2020-11-18T12:53:52.714Z</updated>
   <id>http://deepwu.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>keras中模型的搭建，以及输入数据格式的理解</title>
+    <link href="http://deepwu.github.io/2020/111828818.html"/>
+    <id>http://deepwu.github.io/2020/111828818.html</id>
+    <published>2020-11-18T12:05:19.000Z</published>
+    <updated>2020-11-18T12:53:52.714Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h1&gt;&lt;span id=&quot;1-keras框架搭建模型的两种方式&quot;&gt;1. keras框架搭建模型的两种方式&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;11-基于kerasmodelssequential的模型构建方法&quot;&gt;1.1
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="keras" scheme="http://DeepWu.github.io/tags/keras/"/>
+    
+      <category term="神经网络" scheme="http://DeepWu.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>rabbitmq使用总结</title>
@@ -47,7 +75,7 @@
     <link href="http://deepwu.github.io/2020/111552018.html"/>
     <id>http://deepwu.github.io/2020/111552018.html</id>
     <published>2020-11-15T04:00:14.000Z</published>
-    <updated>2020-11-15T04:16:11.947Z</updated>
+    <updated>2020-11-18T12:06:08.564Z</updated>
     
     <summary type="html">
     
@@ -80,9 +108,9 @@
       <category term="论文" scheme="http://DeepWu.github.io/categories/%E8%AE%BA%E6%96%87/"/>
     
     
-      <category term="论文" scheme="http://DeepWu.github.io/tags/%E8%AE%BA%E6%96%87/"/>
-    
       <category term="研究生" scheme="http://DeepWu.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+      <category term="论文" scheme="http://DeepWu.github.io/tags/%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
@@ -109,9 +137,9 @@
       <category term="写作" scheme="http://DeepWu.github.io/categories/%E5%86%99%E4%BD%9C/"/>
     
     
-      <category term="论文" scheme="http://DeepWu.github.io/tags/%E8%AE%BA%E6%96%87/"/>
-    
       <category term="研究生" scheme="http://DeepWu.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    
+      <category term="论文" scheme="http://DeepWu.github.io/tags/%E8%AE%BA%E6%96%87/"/>
     
   </entry>
   
