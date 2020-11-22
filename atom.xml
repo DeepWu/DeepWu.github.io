@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://deepwu.github.io/"/>
-  <updated>2020-11-18T12:53:52.714Z</updated>
+  <updated>2020-11-22T14:43:46.446Z</updated>
   <id>http://deepwu.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux常用命令积累</title>
+    <link href="http://deepwu.github.io/2020/112219676.html"/>
+    <id>http://deepwu.github.io/2020/112219676.html</id>
+    <published>2020-11-22T05:23:38.000Z</published>
+    <updated>2020-11-22T14:43:46.446Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot; language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;date         查看日期
+netstat -an|findstr 8888                  查看端口是否被占用
+ctrl + c   
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>keras中模型的搭建，以及输入数据格式的理解</title>
     <link href="http://deepwu.github.io/2020/111828818.html"/>
     <id>http://deepwu.github.io/2020/111828818.html</id>
     <published>2020-11-18T12:05:19.000Z</published>
-    <updated>2020-11-18T12:53:52.714Z</updated>
+    <updated>2020-11-18T12:54:27.595Z</updated>
     
     <summary type="html">
     

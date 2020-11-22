@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Linux常用命令积累</title>
+      <link href="/2020/112219676.html"/>
+      <url>/2020/112219676.html</url>
+      
+        <content type="html"><![CDATA[<pre class=" language-shell"><code class="language-shell">date         查看日期netstat -an|findstr 8888                  查看端口是否被占用ctrl + c                                   终止命令ctrl + insert  复制  shift + insert      粘贴（linux 和 windows通用）pwd                                     打印当前路径tar -zxvf 压缩包名 -C 目的路径                 解压tar zcvf 压缩包文件名 待打包的目录/或文件列表rm -rf 目录/文件1 目录/文件2            删除文件mv 源文件 目标文件/目录                   改名称、移动文件cp -r 源文件 目标文件名                       复制文件(-r 表示复制目录/文件)more 文件名                          分页显示，空格显示下一页  b显示上一页 q退出wc 文件名                             统计当前文本文件的行数，单词数，字节数grep 待搜索的内容 文件名称              在文件中搜索内容并输出find 目录名 -name 文件名 -printgroupadd 组名                        添加用户组groupdel 组名                        删除用户组useradd -n 用户名 -g 组名 -d 用户的主目录userdel 用户名passwd  用户名                修改用户密码，root用户需加指定的用户名，普通用户不需要su -root 切换到              root用户chwon [-R]         修改目录和文件的主人和组        eg: chown -R jason：hik /etc /bin         将etc 和 bin目录的主人修改为jason，组hikdf [-h][-T]    h：方便阅读 第一行： 总空间，加载点   第二行：内存   第三行：启动分区        -T ： 列出文件系统类型</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>keras中模型的搭建，以及输入数据格式的理解</title>
       <link href="/2020/111828818.html"/>
       <url>/2020/111828818.html</url>
