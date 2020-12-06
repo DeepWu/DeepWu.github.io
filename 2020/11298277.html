@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="虚拟机网络连接的三种方式, DeepWu">
+    <meta name="keywords" content="clickHouse学习笔记, DeepWu">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>虚拟机网络连接的三种方式 | DeepWu</title>
+    <title>clickHouse学习笔记 | DeepWu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://q9nd0oq0r.bkt.clouddn.com/2.b.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">虚拟机网络连接的三种方式</h1>
+                    <h1 class="description center-align post-title">clickHouse学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -439,33 +439,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/">
-                                <span class="chip bg-color">大数据开发</span>
-                            </a>
-                        
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">
-                                <span class="chip bg-color">虚拟机</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%BC%80%E5%8F%91/" class="post-category">
-                                开发
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -474,21 +453,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-05
+                    2020-11-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-05
+                    2020-11-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    236
+                    353
                 </div>
                 
 
@@ -500,19 +479,45 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="虚拟机网络连接的三种方式">虚拟机网络连接的三种方式</span></h1><h2><span id="桥接模式">桥接模式</span></h2><blockquote>
-<p>虚拟机与母机的IP地址在同一个网段，可以相互通信。</p>
+                <p>[toc]</p>
+<h1><span id="clickhouse是什么特性">clickHouse是什么？特性？</span></h1><blockquote>
+<p>1.分布式存储数据库（真正的列式存储，每个列存储到一个文件。存储到磁盘，多核心并行处理，支持sql）</p>
+<p>2.可以实现OLAP(在线实时处理)： 查询速度快、存储数据量大 、查询维度应固定 （多个）（Kylin也有类似能力）</p>
+<p>3.支持向量引擎：数据不仅仅按列存储，还按照向量存储，更高效的利用cpu</p>
+<p>4.支持索引：按照主键排序，可以方便范围查找</p>
+<p>5.近似计算：牺牲精度获得更快的查询速度</p>
+<p>6.高可靠性和容错性</p>
+<p>7.写入速度50-200M/s</p>
+<p>8.不支持事物！！！！！！！！！！！！！！！！！！</p>
 </blockquote>
-<p>优点：同一个网段内不同母机（母机指虚拟机安装的机器）上的虚拟机也可以相互通信。</p>
-<p>缺点：一个网段的IP地址是有限的。比如（192.168.14.0~192.168.14.255，其中0为保留地址，255为广播地址，1为网关地址，因此实际可以使用的只有253个地址）</p>
-<h2><span id="nat模式">NAT模式</span></h2><blockquote>
-<p>网络地址转换模式</p>
+<blockquote>
+<p>补充：    Mysql可以实现查询速度快，但存储数据量较少</p>
+<p>​                Hbase：存储数据量大，查询速度快，但是查询维度单一（rowkey）。</p>
 </blockquote>
-<p>优点：该模式可以生成新的母机IP地址。（假设原系统为windows，则该模式下，在原系统有两个IP地址：原有IP地址和新IP地址）centos的地址与新IP地址处于同一个网段</p>
-<p>缺点：内网其他人不能和虚拟机通讯。</p>
-<h2><span id="主机模式">主机模式</span></h2><blockquote>
-<p>单独的一台电脑，通常不使用</p>
+<h1><span id="clickhouse的存储引擎">clickhouse的存储引擎</span></h1><h2><span id="数据库引擎">数据库引擎</span></h2><p><a href="https://clickhouse.tech/docs/en/engines/table-engines/" target="_blank" rel="noopener">官网</a></p>
+<h3><span id="默认引擎本地存储">默认引擎（本地存储）</span></h3><blockquote>
+<p>常用</p>
 </blockquote>
+<h3><span id="mysql引擎">Mysql引擎</span></h3><blockquote>
+<p>不常用，与mysql可以映射</p>
+</blockquote>
+<h2><span id="表引擎">表引擎</span></h2><blockquote>
+<p>表引擎决定了：</p>
+<ol>
+<li>数据的存储方式和位置（写到：本地、kafka、rabbitmq、hdfs…）</li>
+<li>支持哪些查询以及如何支持</li>
+<li>并发数据访问</li>
+<li>索引的使用（）</li>
+<li>是否支持多线程</li>
+<li>数据复制参数</li>
+</ol>
+</blockquote>
+<h3><span id="mergetree">MergeTree</span></h3><blockquote>
+<p>最常用</p>
+</blockquote>
+<h1><span id="安装与启动">安装与启动</span></h1><p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201129121219.png" alt></p>
+<h1><span id="命令行建表">命令行建表</span></h1><p>略（暂时用不到）</p>
+<h1><span id="数据类型">数据类型</span></h1><h1><span id="数据导入">数据导入</span></h1><h1><span id="数据导出">数据导出</span></h1><h1><span id="jdbc连接与使用">JDBC连接与使用</span></h1><p><img src="https://cdn.jsdelivr.net/gh/DeepWu/PicGoBlog/img/20201129173920.png" alt></p>
 
             </div>
             <hr/>
@@ -538,7 +543,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://DeepWu.github.io/2020/050522046.html">http://DeepWu.github.io/2020/050522046.html</a>
+                    <a href="http://DeepWu.github.io/2020/11298277.html">http://DeepWu.github.io/2020/11298277.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -575,19 +580,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/">
-                                    <span class="chip bg-color">大数据开发</span>
-                                </a>
-                            
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">
-                                    <span class="chip bg-color">虚拟机</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -753,52 +746,42 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/050519279.html">
+                <a href="/2020/11298277.html">
                     <div class="card-image">
                         
-                        <img src="http://q9nd0oq0r.bkt.clouddn.com/3.b.jpg" class="responsive-img" alt="大数据开发之Linux学习一">
                         
-                        <span class="card-title">大数据开发之Linux学习一</span>
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="clickHouse学习笔记">
+                        
+                        <span class="card-title">clickHouse学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Linux相关知识一，包括Linux简介、虚拟机和Linux安装、Linux终端和联网
+                            [toc]
+clickHouse是什么？特性？
+1.分布式存储数据库（真正的列式存储，每个列存储到一个文件。存储到磁盘，多核心并行处理，支持sql）
+2.可以实现OLAP(在线实时处理)： 查询速度快、存储数据量大 、查询维度应固定 （多个
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-29
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%BC%80%E5%8F%91/" class="post-category">
-                                    开发
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            DeepWu
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">大数据开发</span>
-                    </a>
-                    
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -809,47 +792,35 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/050119279.html">
+                <a href="/2020/112219676.html">
                     <div class="card-image">
                         
-                        <img src="http://q9nd0oq0r.bkt.clouddn.com/3.jpg" class="responsive-img" alt="基于hexo的博客搭建和更新">
                         
-                        <span class="card-title">基于hexo的博客搭建和更新</span>
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Linux常用命令积累">
+                        
+                        <span class="card-title">Linux常用命令积累</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            以hexo为框架的博客搭建教程地址，博客更新具体操作
+                            date         查看日期
+netstat -an|findstr 8888                  查看端口是否被占用
+ctrl + c                                   终止命令
+ct
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            DeepWu
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
-                    </a>
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
                 </div>
                 
             </div>
